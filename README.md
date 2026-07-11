@@ -32,8 +32,6 @@
 
 </div>
 
----
-
 ## 🧬 About Me
 
 <table>
@@ -105,12 +103,12 @@ class Hamza:
 </td>
 <td valign="top">
 
-![Google Antigravity](https://img.shields.io/badge/Google_Antigravity-4285F4?style=flat-square&logo=google&logoColor=white)
-![Colab](https://img.shields.io/badge/Colab-F9AB00?style=flat-square&logo=googlecolab&logoColor=black)
+![Google Colab](https://img.shields.io/badge/Google_Colab-4285F4?style=flat-square&logo=googlecolab&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 ![AionUI](https://img.shields.io/badge/AionUI-9D4EDD?style=flat-square&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 </td>
 </tr>
@@ -230,7 +228,62 @@ class Hamza:
 
 </div>
 
-![snake gif](https://github.com/Hamza-learner/Hamza-Learner/blob/output/github-contribution-grid-snake.gif)
+---
+
+## 🐍 Animated Snake
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/Hamza-Learner/Hamza-Learner/output/github-contribution-grid-snake.svg" alt="snake" width="100%">
+
+<sub>⏳ Snake animation generate ho rahi hai — workflow run hone ke baad dikhegi.</sub>
+
+</div>
+
+<details>
+<summary><b>⚙️ Click here for Snake Animation Setup Instructions</b></summary>
+
+<br>
+
+1. Apni profile repo (`Hamza-Learner/Hamza-Learner`) mein folder banao: `.github/workflows/`
+2. Usme ek file banao: `snake.yml`
+3. Ye content paste karo:
+
+```yaml
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: generate snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: Hamza-Learner
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg
+      - name: push to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+4. **Commit** karo → repo mein jao → **Actions** tab → **"Generate Snake"** workflow → **Run workflow** daba do.
+5. 2-3 minute mein snake animation live ho jayegi!
+
+</details>
+
 ---
 
 ## 🎯 Vision Timeline
