@@ -230,7 +230,7 @@ class Hamza:
 
 </div>
 
-
+![snake gif](https://github.com/Hamza-learner/Hamza-Learner/blob/output/github-contribution-grid-snake.gif)
 ---
 
 ## 🎯 Vision Timeline
